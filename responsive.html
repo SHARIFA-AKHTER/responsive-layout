@@ -5,31 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Design</title>
     <style>
-        .title{
-         
-        }
+        body{
+            font-family: Arial,  sans-serif;
+            margin: 0;
+            padding: 0;
+        } 
         .container{
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .images{
+            flex: 1;
+            display: flex;
             flex-direction: column;
+           align-items: center;
+        }
+
+        .images img{
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .text{
+           flex: 1;
+           padding: 20px;
+        }
+
+        .btn{
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: none;
+            margin: 10px;
+        }
+        @media screen and (max-width:576){
+            .container{
+                flex-direction: column;
+            }
           
         }
-        .container p, .container h3{
-            color: rgb(254, 90, 90);
-           font-size: 1.5rem;
-           
-         
-         
-          
-        }
-        
-      
+
     </style>
    
 </head>
-<body class="title">
-    <div class="container">
+<body>
+   <div class="container">
+    <div class="images">
+        <img src="../responsive-layout/images/food-img.jpg" alt=""> 
+    </div>
+    <div class="text">
         <h3>Post Title Will Be Here</h3>
         <p>Lorem ipsum dolor sit amet consectetur 
             adipisicing elit. Numquam voluptate deleniti 
@@ -38,8 +64,29 @@
             Lorem ipsum dolor sit amet consectetur 
             adipisicing elit. Numquam voluptate deleniti
             </p>
-            <button class="btn">Read More</button>
+            <button class="btn">Read More</button>     
+        </div>
+    
+   </div>
+   
+
+   <div class="container">
+    <div class="images">
+        <img src="../responsive-layout/images/food-img 2.jpg" alt="">
     </div>
-    <img src="../images/food-img.jpg" alt="">
+    <div class="text">
+        <h3>Post Title Will Be Here</h3>
+        <p>Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Numquam voluptate deleniti 
+            impedit explicabo debitis qui quo esse 
+            recusandae placeat natus adipisci eaque
+            Lorem ipsum dolor sit amet consectetur 
+            adipisicing elit. Numquam voluptate deleniti
+            </p>
+            <button class="btn">Read More</button>     
+        </div>
+    
+   </div>
+   
 </body>
 </html>
